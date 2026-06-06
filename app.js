@@ -39,7 +39,7 @@ app.set("views", path.join(__dirname, "views"));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
-app.use(express.static(path.join(__dirname, "/public")));
+app.use(express.static(path.join(__dirname, "public")));
 
 app.engine("ejs", ejsMate);
 
@@ -72,6 +72,7 @@ app.use(flash());
 
 app.use(passport.initialize());
 app.use(passport.session());
+
 passport.use(new LocalStrategy(User.authenticate()));
 
 passport.serializeUser(User.serializeUser());
@@ -102,9 +103,11 @@ app.use((err, req, res, next) => {
   res.status(statusCode).render("error.ejs", { message });
 });
 
+const PORT = process.env.PORT || 8080;
+
 if (require.main === module) {
-  app.listen(8080, () => {
-    console.log("Server is listening to port 8080");
+  app.listen(PORT, () => {
+    console.log(`Server is listening on port ${PORT}`);
   });
 }
 
