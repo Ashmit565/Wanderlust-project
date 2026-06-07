@@ -1,86 +1,99 @@
 # WanderLust
 
-WanderLust​‍​‌‍​‍‌​‍​‌‍​‍‌ is a full-stack web application inspired from Airbnb. It is an online platform that allows users to post listings for their homes in the case of a short vacation stay, browse and read the details of different properties, and also write their opinions and give a rating to the accommodation. The app implements the MVC (Model-View-Controller) architecture and also has features like encrypted user login, user picture storage, and user-friendly ​‍​‌‍​‍‌​‍​‌‍​‍‌maps.
-
-**Live Project Link: [https://project-wanderlust-psi.vercel.app/listings](https://project-wanderlust-psi.vercel.app/listings)**
+WanderLust is a full-stack web application inspired by Airbnb. It allows users to create property listings, browse accommodations, upload images, and share reviews through a secure authentication system.
 
 ## Features
 
-- **User Authentication:** Secure signup and login functionality using Passport.js.
-- **Listing Management:** Users can create, read, update, and delete (CRUD) their own property listings.
-- **Reviews & Ratings:** Authenticated users can leave reviews and star ratings for listings.
-- **Image Uploads:** Integration with Cloudinary for storing and retrieving listing images.
-- **Map Integration:** Displays the location of the property on an interactive map using Mapbox.
-- **Responsive Design:** Built with Bootstrap to ensure usability across various device sizes.
-- **Session Management:** Uses Express Session and Connect Mongo for maintaining user sessions.
-- **Flash Messages:** Provides immediate feedback to users (e.g., success or error messages).
+* User Authentication using Passport.js
+* Create, Read, Update, and Delete Listings
+* Reviews and Ratings System
+* Image Uploads with Cloudinary
+* MongoDB Atlas Database Integration
+* Session Management
+* Flash Messages
+* Responsive Design using Bootstrap 5
+
+Live Project Link: https://project-wanderlust-psi.vercel.app/listings
 
 ## Tech Stack
 
-- **Frontend:** EJS (Embedded JavaScript), HTML5, CSS3, Bootstrap 5
-- **Backend:** Node.js, Express.js
-- **Database:** MongoDB, Mongoose
-- **Authentication:** Passport.js (Local Strategy)
-- **Cloud Storage:** Cloudinary
-- **Maps:** Mapbox GL JS, Mapbox SDK
+### Frontend
+
+* EJS
+* HTML5
+* CSS3
+* Bootstrap 5
+
+### Backend
+
+* Node.js
+* Express.js
+
+### Database
+
+* MongoDB Atlas
+* Mongoose
+
+### Authentication
+
+* Passport.js (Local Strategy)
+
+### Cloud Storage
+
+* Cloudinary
 
 ## Installation & Setup
 
-### Steps
+### 1. Clone the Repository
 
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/kamlesh0928/project-wanderlust.git
-    ```
+```bash
+git clone https://github.com/Ashmit565/Wanderlust-project.git
+```
 
-2.  **Navigate to the project directory:**
-    ```bash
-    cd project-wanderlust
-    ```
+### 2. Navigate to the Project Directory
 
-3.  **Install dependencies:**
-    ```bash
-    npm install
-    ```
+```bash
+cd Wanderlust-project
+```
 
-4.  **Configure Environment Variables:**
-    Create a `.env` file in the root directory and add the following credentials:
+### 3. Install Dependencies
 
-    ```env
-    # Cloudinary Setup (for Image Storage)
-    CLOUD_NAME=your_cloudinary_cloud_name
-    CLOUD_API_KEY=your_cloudinary_api_key
-    CLOUD_API_SECRET=your_cloudinary_api_secret
+```bash
+npm install
+```
 
-    # Mapbox Setup (for Maps)
-    MAP_TOKEN=your_mapbox_public_token
+### 4. Configure Environment Variables
 
-    # Database & Session Setup
-    ATLASDB_URL=your_mongodb_connection_string
-    SECRET=your_session_secret_key
-    ```
+Create a `.env` file in the root directory and add:
 
-5.  **Seed the Database (Optional):**
-    To populate the database with initial sample listings, run the initialization script.
-    
-    ```bash
-    node init/index.js
-    ```
-    *Note: By default, this script connects to a local MongoDB instance. If you wish to seed a cloud database, update the connection string in `init/index.js`.*
+```env
+CLOUD_NAME=your_cloudinary_cloud_name
+CLOUD_API_KEY=your_cloudinary_api_key
+CLOUD_API_SECRET=your_cloudinary_api_secret
 
-6.  **Start the Application:**
-    ```bash
-    node app.js
-    ```
-    
-7.  **Access the App:**
-    Open your browser and navigate to `http://localhost:8080`.
+ATLASDB_URL=your_mongodb_connection_string
 
+SECRET=your_session_secret_key
+```
 
-## Contributions
-Contributions are welcome! If you'd like to contribute, please fork the repository and create a pull request.
+### 5. Seed the Database
 
-## License
-This project is licensed under the MIT License. Please see the [LICENSE](LICENSE) file for more information.
+```bash
+node init/index.js
+```
 
-<br>
+### 6. Start the Application
+
+```bash
+npm start
+```
+
+### 7. Open in Browser
+
+```text
+http://localhost:8080
+```
+
+## Author
+
+Ashmit
