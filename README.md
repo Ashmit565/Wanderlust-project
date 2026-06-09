@@ -13,7 +13,7 @@ WanderLust is a full-stack web application inspired by Airbnb. It allows users t
 * Flash Messages
 * Responsive Design using Bootstrap 5
 
-Live Project Link: https://project-wanderlust-psi.vercel.app/listings
+Live Project Link: https://wanderlust-project-ashmit.onrender.com
 
 ## Tech Stack
 
